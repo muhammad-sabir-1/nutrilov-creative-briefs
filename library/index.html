@@ -12,22 +12,20 @@ body{background:var(--bg);color:var(--ink);font-family:-apple-system,system-ui,s
 .crumb a{color:var(--muted);}
 h1{font-size:28px;margin:0 0 4px;letter-spacing:-0.01em;}
 .sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
-
 .filters{margin:18px 0;display:flex;flex-direction:column;gap:8px;}
 .filter-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
 .filter-row .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:600;margin-right:4px;}
 .filter-chip{background:#fff;border:1px solid var(--line);padding:5px 11px;border-radius:6px;cursor:pointer;font:inherit;font-size:12px;}
 .filter-chip.active{background:var(--ink);color:#fff;border-color:var(--ink);}
 .filter-chip.type{font-weight:600;}
-
 table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
 th{text-align:left;padding:10px 12px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;font-weight:700;border-bottom:1px solid var(--line);background:#f7f3e9;}
 td{padding:10px 12px;border-bottom:1px solid var(--line);font-size:13.5px;vertical-align:top;}
 tr:last-child td{border-bottom:0;}
 tr:hover{background:#fafaf6;}
-
 .copy-cell{font-size:14px;color:#222;max-width:520px;}
 .type-pill{display:inline-block;font-size:10.5px;padding:2px 8px;border-radius:99px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;}
+.type-pill.type-hook{background:#e65100;color:#fff;}
 .type-pill.type-headline{background:#1a1a1a;color:#fff;}
 .type-pill.type-sub{background:#7a3aa1;color:#fff;}
 .type-pill.type-caption{background:#1e88e5;color:#fff;}
@@ -38,7 +36,6 @@ tr:hover{background:#fafaf6;}
 .actions{text-align:right;white-space:nowrap;}
 .copy-btn{background:var(--line);border:0;padding:4px 9px;border-radius:5px;cursor:pointer;font:inherit;font-size:11.5px;}
 .copy-btn:hover{background:var(--ink);color:#fff;}
-
 .counts{font-size:12.5px;color:var(--muted);margin-bottom:10px;}
 .counts b{color:var(--ink);}
 footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
@@ -46,7 +43,7 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
 
 <div class="crumb"><a href="../">← All</a></div>
 <h1>Copy Library</h1>
-<div class="sub">69 lines · 38 headlines · 17 sub-lines · 14 captions. Filter by angle or type. Click a format chip to jump to the format spec.</div>
+<div class="sub">144 lines · 23 hooks · 74 headlines · 26 sub-lines · 21 captions. Filter by angle or type. Click a format chip to jump to the format spec.</div>
 
 <div class="filters">
   <div class="filter-row">
@@ -57,7 +54,7 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
   <div class="filter-row">
     <span class="label">Type:</span>
     <button class="filter-chip type active" data-type="all">All</button>
-    <button class="filter-chip type" data-type="Headline">Headline</button><button class="filter-chip type" data-type="Sub">Sub</button><button class="filter-chip type" data-type="Caption">Caption</button>
+    <button class="filter-chip type" data-type="Hook">Hook</button><button class="filter-chip type" data-type="Headline">Headline</button><button class="filter-chip type" data-type="Sub">Sub</button><button class="filter-chip type" data-type="Caption">Caption</button>
   </div>
 </div>
 
@@ -74,7 +71,37 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
     </tr>
   </thead>
   <tbody id="tbody">
-    <tr data-angle="N1" data-type="Headline">
+    <tr data-angle="N1" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">No time for breakfast?</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="No time for breakfast?">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Your blender can stay clean.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Your blender can stay clean.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">90 seconds. 20g protein.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="90 seconds. 20g protein.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Hungry by 10am?</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Hungry by 10am?">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Skip cooking, not breakfast.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Skip cooking, not breakfast.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">No time for breakfast? No problem.</td>
           <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
@@ -110,6 +137,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Your blender can stay clean.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">5 minutes to brush teeth. 90 seconds to eat 20g of protein.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="5 minutes to brush teeth. 90 seconds to eat 20g of protein.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">The only breakfast you can eat with one hand.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The only breakfast you can eat with one hand.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Hungry by 10am? Your breakfast didn&#x27;t have enough protein.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Hungry by 10am? Your breakfast didn&#x27;t have enough protein.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">20g of protein. Before you sit at your desk.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="20g of protein. Before you sit at your desk.">Copy</button></td>
         </tr><tr data-angle="N1" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">90 seconds. 20g protein.</td>
@@ -128,6 +179,18 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Slow-release dairy protein keeps you full till lunch.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Less time than your shower. More protein than your apple.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Less time than your shower. More protein than your apple.">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Casein-dominant. 4-6 hour release.</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Casein-dominant. 4-6 hour release.">Copy</button></td>
         </tr><tr data-angle="N1" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">Mornings shouldn&#x27;t fight you. Pour, eat, leave — 20g protein in 90 seconds. Order at nutrilov.com — delivered to your door.</td>
@@ -140,6 +203,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="The breakfast you actually have time for. 20g protein. 90 seconds. No blender, no cooking. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N1" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">Most mornings end in a skipped breakfast and an 11am biscuit. We built the fix. 90 seconds, 20g of real protein. nutrilov.com</td>
+          <td><span class="angle-pill">N1</span> <span class="angle-name">No time</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Most mornings end in a skipped breakfast and an 11am biscuit. We built the fix. 90 seconds, 20g of real protein. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Paratha isn&#x27;t a protein floor.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Paratha isn&#x27;t a protein floor.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Keep the paratha for Sundays.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Keep the paratha for Sundays.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Still running on bread?</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Still running on bread?">Copy</button></td>
         </tr><tr data-angle="N2" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">Save the paratha for Sundays.</td>
@@ -170,6 +257,36 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="A weekday breakfast that actually does the work.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Paratha + chai: 8g protein. This bowl: 20g.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Paratha + chai: 8g protein. This bowl: 20g.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Still building your morning around paratha?</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Still building your morning around paratha?">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">58% of urban Pakistanis are protein-deficient. Start at breakfast.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="58% of urban Pakistanis are protein-deficient. Start at breakfast.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">A Pakistani breakfast that closes the protein gap.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="A Pakistani breakfast that closes the protein gap.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Stop running on bread. Start running on protein.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Stop running on bread. Start running on protein.">Copy</button></td>
         </tr><tr data-angle="N2" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">Paratha: 8g protein. This: 20g.</td>
@@ -182,6 +299,18 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Pakistan eats 10g less protein than the global average. Start at breakfast.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Mon-Sat protein floor. Sunday treat.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Mon-Sat protein floor. Sunday treat.">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">26% protein-by-calorie vs paratha&#x27;s 7%.</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="26% protein-by-calorie vs paratha&#x27;s 7%.">Copy</button></td>
         </tr><tr data-angle="N2" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">Keep the paratha for Sundays. The other six mornings, switch to 20g of real protein in 90 seconds. nutrilov.com</td>
@@ -194,6 +323,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Pakistan&#x27;s daily protein gap closes one breakfast at a time. 20g per bowl. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N2" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">Identity meal stays. Weekday default changes. 20g protein, 90 seconds. nutrilov.com</td>
+          <td><span class="angle-pill">N2</span> <span class="angle-name">Desi breakfast gap</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Identity meal stays. Weekday default changes. 20g protein, 90 seconds. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Rs. 900 for 20g of protein?</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Rs. 900 for 20g of protein?">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Eight ingredients. All halal.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Eight ingredients. All halal.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Imported quality. Local accountability.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Imported quality. Local accountability.">Copy</button></td>
         </tr><tr data-angle="N3" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">Pakistan&#x27;s first 20g Protein Granola.</td>
@@ -230,6 +383,36 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
           <td class="actions"><button class="copy-btn" data-copy="You shouldn&#x27;t gamble on an imported bar.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Rs. 900 imported bar. Rs. 1,400 daily breakfast. Same protein, better math.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Rs. 900 imported bar. Rs. 1,400 daily breakfast. Same protein, better math.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">8 ingredients. 20g protein. 0 import duty.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="8 ingredients. 20g protein. 0 import duty.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Does your protein bar arrive expired?</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Does your protein bar arrive expired?">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">78% of audited &#x27;protein&#x27; products have hidden animal ingredients. Not ours.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="78% of audited &#x27;protein&#x27; products have hidden animal ingredients. Not ours.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Made in Karachi. Stocked at 1,500+ stores nationwide.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Made in Karachi. Stocked at 1,500+ stores nationwide.">Copy</button></td>
         </tr><tr data-angle="N3" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">European milk protein. US-sourced BC30. Halal-by-default.</td>
@@ -242,6 +425,12 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
           <td class="actions"><button class="copy-btn" data-copy="20g protein. 0g added sugar. No gelatin.">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Imported inputs. Karachi-built. PKR-priced.</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Imported inputs. Karachi-built. PKR-priced.">Copy</button></td>
         </tr><tr data-angle="N3" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">Imported inputs. Pakistani accountability. 20g protein per bowl, no Daraz gamble. nutrilov.com</td>
@@ -254,6 +443,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Eight ingredients on the back. All halal. All pronounceable. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N3" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">We use the same European milk protein as the bars you&#x27;ve imported. We just don&#x27;t tax it to Pakistan. nutrilov.com</td>
+          <td><span class="angle-pill">N3</span> <span class="angle-name">Imported vs local</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#K">K</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="We use the same European milk protein as the bars you&#x27;ve imported. We just don&#x27;t tax it to Pakistan. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Oreo has 5g protein. This has 20.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Oreo has 5g protein. This has 20.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">The breakfast they finish.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The breakfast they finish.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Sugar without the sugar.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Sugar without the sugar.">Copy</button></td>
         </tr><tr data-angle="N4" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">The breakfast they ask for seconds of.</td>
@@ -284,6 +497,36 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Lunchbox-approved by you. Demanded by them.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Your kid&#x27;s breakfast: more sugar than a biscuit?</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Your kid&#x27;s breakfast: more sugar than a biscuit?">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Kids should eat under 25g of sugar a day. One Oreo pack: 37g.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Kids should eat under 25g of sugar a day. One Oreo pack: 37g.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Protein that tastes like dessert. Sugar that doesn&#x27;t.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Protein that tastes like dessert. Sugar that doesn&#x27;t.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Stop negotiating with your kid at 7am.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Stop negotiating with your kid at 7am.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Cake rusk: 18g sugar, 3g protein. This: 0g added, 12g protein.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Cake rusk: 18g sugar, 3g protein. This: 0g added, 12g protein.">Copy</button></td>
         </tr><tr data-angle="N4" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">12g protein. 0g added sugar. 5g total sugar.</td>
@@ -292,10 +535,16 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td class="actions"><button class="copy-btn" data-copy="12g protein. 0g added sugar. 5g total sugar.">Copy</button></td>
         </tr><tr data-angle="N4" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
-          <td class="copy-cell">One Oreo pack already breaks the WHO daily sugar cap for kids. This doesn&#x27;t.</td>
+          <td class="copy-cell">One Oreo pack alone breaks the WHO daily sugar cap. This doesn&#x27;t.</td>
           <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
-          <td class="actions"><button class="copy-btn" data-copy="One Oreo pack already breaks the WHO daily sugar cap for kids. This doesn&#x27;t.">Copy</button></td>
+          <td class="actions"><button class="copy-btn" data-copy="One Oreo pack alone breaks the WHO daily sugar cap. This doesn&#x27;t.">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Chocolatey enough that the lunchbox comes back empty.</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Chocolatey enough that the lunchbox comes back empty.">Copy</button></td>
         </tr><tr data-angle="N4" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">End the daily lunchbox negotiation. Tasty for them, 0g added sugar for you. nutrilov.com</td>
@@ -308,6 +557,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
           <td class="actions"><button class="copy-btn" data-copy="WHO says under 25g sugar a day for kids. An Oreo pack alone is 37. Switch their breakfast. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N4" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">The breakfast where you and your kid finally agree. 12g protein. 0g added sugar. nutrilov.com</td>
+          <td><span class="angle-pill">N4</span> <span class="angle-name">For kids</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#M">M</a> <a class="fmt-pill" href="../formats/#N">N</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The breakfast where you and your kid finally agree. 12g protein. 0g added sugar. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Whey burning your gut?</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Whey burning your gut?">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Half of Pakistan can&#x27;t digest whey.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Half of Pakistan can&#x27;t digest whey.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Protein. With a probiotic.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Protein. With a probiotic.">Copy</button></td>
         </tr><tr data-angle="N5" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">Protein without the bloat.</td>
@@ -338,6 +611,36 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
           <td class="actions"><button class="copy-btn" data-copy="No shake. No gas. No gym aftermath.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">60% of Pakistanis are lactose-malabsorbers. Most supplements ignore that.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="60% of Pakistanis are lactose-malabsorbers. Most supplements ignore that.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Bloated after your post-workout shake?</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Bloated after your post-workout shake?">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Casein-dominant. BC30 probiotic. Lactose-friendly.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Casein-dominant. BC30 probiotic. Lactose-friendly.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Stop forcing whey on a gut that doesn&#x27;t want it.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Stop forcing whey on a gut that doesn&#x27;t want it.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">From post-shake bloat to a breakfast your gym buddy asks about.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="From post-shake bloat to a breakfast your gym buddy asks about.">Copy</button></td>
         </tr><tr data-angle="N5" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">Casein-dominant + BC30 probiotic.</td>
@@ -356,6 +659,12 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
           <td class="actions"><button class="copy-btn" data-copy="1 billion CFU per serving. USA-sourced strain.">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Whey: 5-6% lactose. This: half that, plus a probiotic.</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Whey: 5-6% lactose. This: half that, plus a probiotic.">Copy</button></td>
         </tr><tr data-angle="N5" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">Half the country can&#x27;t fully digest whey. Casein-dominant + BC30 probiotic — 20g of protein your gut tolerates. nutrilov.com</td>
@@ -368,6 +677,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Real food protein. Named probiotic strain. Citation trail you can look up. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N5" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">If your post-workout shake bloats you, it&#x27;s not the gym. It&#x27;s the whey. nutrilov.com</td>
+          <td><span class="angle-pill">N5</span> <span class="angle-name">Gut-friendly protein</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#A">A</a> <a class="fmt-pill" href="../formats/#B">B</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#I">I</a> <a class="fmt-pill" href="../formats/#K">K</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="If your post-workout shake bloats you, it&#x27;s not the gym. It&#x27;s the whey. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">When did breakfast become tea-on-the-way?</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="When did breakfast become tea-on-the-way?">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">The reset starts at breakfast.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The reset starts at breakfast.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Before the gym is back, start here.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Before the gym is back, start here.">Copy</button></td>
         </tr><tr data-angle="N6" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">The fitness comeback starts at breakfast.</td>
@@ -398,18 +731,60 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Same kitchen. Same morning. One change.">Copy</button></td>
-        </tr><tr data-angle="N6" data-type="Sub">
-          <td><span class="type-pill type-sub">Sub</span></td>
-          <td class="copy-cell">20g protein. Casein-dominant. 4–6 hour release.</td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">When did breakfast become tea-on-the-way?</td>
           <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
-          <td class="actions"><button class="copy-btn" data-copy="20g protein. Casein-dominant. 4–6 hour release.">Copy</button></td>
+          <td class="actions"><button class="copy-btn" data-copy="When did breakfast become tea-on-the-way?">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">From &#x27;I should restart the gym&#x27; to one bowl a day. Start here.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="From &#x27;I should restart the gym&#x27; to one bowl a day. Start here.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">The first move back — and it isn&#x27;t the gym.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The first move back — and it isn&#x27;t the gym.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">52% of Pakistani women are overweight. One meal a day is the easiest place to start.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="52% of Pakistani women are overweight. One meal a day is the easiest place to start.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Gym: 1 hour, Rs. 12K/month. This: 90 seconds, daily.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Gym: 1 hour, Rs. 12K/month. This: 90 seconds, daily.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Stop blaming yourself. Start eating breakfast.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Stop blaming yourself. Start eating breakfast.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">20g protein. Casein-dominant. 4-6 hour release.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="20g protein. Casein-dominant. 4-6 hour release.">Copy</button></td>
         </tr><tr data-angle="N6" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">One meal. Upstream of every other change.</td>
           <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
           <td class="actions"><button class="copy-btn" data-copy="One meal. Upstream of every other change.">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Two bowls. Same kitchen. The reset starts at 7am.</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Two bowls. Same kitchen. The reset starts at 7am.">Copy</button></td>
         </tr><tr data-angle="N6" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">The reset doesn&#x27;t start at the gym. It starts at 7am with 20g of real protein. nutrilov.com</td>
@@ -422,6 +797,30 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Smallest shared move for couples restarting. Same box on the counter. Same morning. Two bowls. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N6" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">Before you restart the gym, restart the breakfast. 20g of protein. 90 seconds. Daily. nutrilov.com</td>
+          <td><span class="angle-pill">N6</span> <span class="angle-name">Post-marriage reset</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#E">E</a> <a class="fmt-pill" href="../formats/#G">G</a> <a class="fmt-pill" href="../formats/#H">H</a> <a class="fmt-pill" href="../formats/#I">I</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Before you restart the gym, restart the breakfast. 20g of protein. 90 seconds. Daily. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">1 in 3 Pakistanis is diabetic.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="1 in 3 Pakistanis is diabetic.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Zero added sugar.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Zero added sugar.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Hook">
+          <td><span class="type-pill type-hook">Hook</span></td>
+          <td class="copy-cell">Tastes like dessert. Reads like medicine.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Tastes like dessert. Reads like medicine.">Copy</button></td>
         </tr><tr data-angle="N7" data-type="Headline">
           <td><span class="type-pill type-headline">Headline</span></td>
           <td class="copy-cell">Low sugar. Full taste.</td>
@@ -458,6 +857,42 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Dairy protein flattens the sugar spike.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">1 in 3 Pakistanis is diabetic. The world&#x27;s highest rate.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="1 in 3 Pakistanis is diabetic. The world&#x27;s highest rate.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Your doctor said cut sugar. Your breakfast still has 18g?</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Your doctor said cut sugar. Your breakfast still has 18g?">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">From breakfast guilt to a number your meter won&#x27;t argue with.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="From breakfast guilt to a number your meter won&#x27;t argue with.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Stop eating sugar for breakfast. Even if the box calls it healthy.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Stop eating sugar for breakfast. Even if the box calls it healthy.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">Fauji Corn Flakes: 8g added sugar. This bowl: 0.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Fauji Corn Flakes: 8g added sugar. This bowl: 0.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Headline">
+          <td><span class="type-pill type-headline">Headline</span></td>
+          <td class="copy-cell">The breakfast that tastes like dessert but reads like medicine.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="The breakfast that tastes like dessert but reads like medicine.">Copy</button></td>
         </tr><tr data-angle="N7" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
           <td class="copy-cell">0g added sugar. 20g protein.</td>
@@ -472,10 +907,16 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td class="actions"><button class="copy-btn" data-copy="Taste same. Meter different.">Copy</button></td>
         </tr><tr data-angle="N7" data-type="Sub">
           <td><span class="type-pill type-sub">Sub</span></td>
-          <td class="copy-cell">Oat β-glucan — the fibre with FDA + EFSA recognised heart-health claim.</td>
+          <td class="copy-cell">Oat β-glucan — the fibre with an FDA-recognised heart-health claim.</td>
           <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
-          <td class="actions"><button class="copy-btn" data-copy="Oat β-glucan — the fibre with FDA + EFSA recognised heart-health claim.">Copy</button></td>
+          <td class="actions"><button class="copy-btn" data-copy="Oat β-glucan — the fibre with an FDA-recognised heart-health claim.">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Sub">
+          <td><span class="type-pill type-sub">Sub</span></td>
+          <td class="copy-cell">Dairy protein cuts post-meal glucose AUC by ~18% in published studies.</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Dairy protein cuts post-meal glucose AUC by ~18% in published studies.">Copy</button></td>
         </tr><tr data-angle="N7" data-type="Caption">
           <td><span class="type-pill type-caption">Caption</span></td>
           <td class="copy-cell">1 in 3 Pakistanis is diabetic — the world&#x27;s highest rate. 0g added sugar, 20g protein, no joyless trade-off. nutrilov.com</td>
@@ -488,15 +929,20 @@ footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);color:v
           <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
           <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
           <td class="actions"><button class="copy-btn" data-copy="Pre-diabetic? The breakfast you don&#x27;t have to dread. 0g added sugar. Tastes like dessert. nutrilov.com">Copy</button></td>
+        </tr><tr data-angle="N7" data-type="Caption">
+          <td><span class="type-pill type-caption">Caption</span></td>
+          <td class="copy-cell">Sugar-free options taste like punishment. This doesn&#x27;t. 0g added, 20g protein. nutrilov.com</td>
+          <td><span class="angle-pill">N7</span> <span class="angle-name">Low sugar, full taste</span></td>
+          <td class="fmts"><a class="fmt-pill" href="../formats/#C">C</a> <a class="fmt-pill" href="../formats/#D">D</a> <a class="fmt-pill" href="../formats/#F">F</a> <a class="fmt-pill" href="../formats/#L">L</a> <a class="fmt-pill" href="../formats/#M">M</a></td>
+          <td class="actions"><button class="copy-btn" data-copy="Sugar-free options taste like punishment. This doesn&#x27;t. 0g added, 20g protein. nutrilov.com">Copy</button></td>
         </tr>
   </tbody>
 </table>
 
-<footer>Source: <code>brands/nutrilov/products/protein-granola/angles.md</code> · Premium English copy, no informal transliteration.</footer>
+<footer>Source: <code>brands/nutrilov/products/protein-granola/angles.md</code> · Framework-driven copy: PAS, BAB, AIDA, Question, Number, Negation, Comparison, Curiosity gap.</footer>
 
 <script>
 let activeAngle = 'all', activeType = 'all';
-
 function applyFilters(){
   let shown = 0;
   document.querySelectorAll('#tbody tr').forEach(tr => {
@@ -505,35 +951,20 @@ function applyFilters(){
     tr.style.display = ok ? '' : 'none';
     if (ok) shown++;
   });
-  document.getElementById('counts').innerHTML = `Showing <b>${shown}</b> of 69 rows.`;
+  document.getElementById('counts').innerHTML = `Showing <b>${shown}</b> of 144 rows.`;
 }
-
-document.querySelectorAll('.filter-chip[data-angle]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-chip[data-angle]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeAngle = btn.dataset.angle;
-    applyFilters();
-  });
-});
-document.querySelectorAll('.filter-chip[data-type]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-chip[data-type]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeType = btn.dataset.type;
-    applyFilters();
-  });
-});
-
-document.querySelectorAll('.copy-btn').forEach(btn => {
-  btn.addEventListener('click', async () => {
-    await navigator.clipboard.writeText(btn.dataset.copy);
-    const orig = btn.textContent;
-    btn.textContent = 'Copied!';
-    setTimeout(() => btn.textContent = orig, 1000);
-  });
-});
-
+document.querySelectorAll('.filter-chip[data-angle]').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.filter-chip[data-angle]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active'); activeAngle = btn.dataset.angle; applyFilters();
+}));
+document.querySelectorAll('.filter-chip[data-type]').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.filter-chip[data-type]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active'); activeType = btn.dataset.type; applyFilters();
+}));
+document.querySelectorAll('.copy-btn').forEach(btn => btn.addEventListener('click', async () => {
+  await navigator.clipboard.writeText(btn.dataset.copy);
+  const o = btn.textContent; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = o, 1000);
+}));
 applyFilters();
 </script>
 </div></body></html>
