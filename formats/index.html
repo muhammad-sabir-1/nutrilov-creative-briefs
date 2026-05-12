@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nutrilov — Format Library</title>
+<style>
+:root{--bg:#faf8f3;--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e1d6;--card:#fff;--eleat:#1e88e5;--yoga:#7a3aa1;}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,system-ui,sans-serif;margin:0;line-height:1.55;font-size:15px;}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 22px 80px;}
+header{margin-bottom:18px;}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-0.01em;}
+.sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.crumb a{color:var(--muted);}
+
+.nav{position:sticky;top:0;background:var(--bg);padding:10px 0 12px;border-bottom:1px solid var(--line);z-index:10;margin-bottom:24px;display:flex;gap:6px;flex-wrap:wrap;}
+.navchip{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--ink);background:#fff;}
+.navchip:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+.archetype{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:22px;}
+.arch-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px;}
+.arch-id{font-size:36px;font-weight:700;color:var(--muted);line-height:1;letter-spacing:-0.02em;width:42px;flex-shrink:0;}
+.arch-titlebox{flex:1;}
+.arch-titlebox h2{margin:0 0 6px;font-size:19px;letter-spacing:-0.005em;}
+.arch-meta{font-size:12.5px;color:var(--muted);}
+.label{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;}
+.works{font-size:14px;color:#333;margin:0 0 8px;}
+.slots{font-size:12.5px;color:var(--muted);margin-bottom:14px;background:#f7f3e9;padding:8px 12px;border-radius:6px;}
+.slots .label{margin-right:4px;}
+
+.pill{display:inline-block;font-size:11px;padding:2px 7px;border-radius:99px;background:#efeae0;color:#555;margin-right:4px;}
+.pill.angle{background:#1a1a1a;color:#fff;font-weight:500;}
+
+.examples{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-top:6px;}
+.ex{background:#f7f3e9;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;}
+.ex img{width:100%;aspect-ratio:1080/1350;object-fit:cover;background:#eee;display:block;}
+.ex-meta{padding:5px 8px 6px;font-size:10.5px;display:flex;justify-content:space-between;align-items:center;gap:6px;}
+.ex-id{color:var(--muted);font-family:ui-monospace,monospace;font-size:10px;}
+.src-tag{padding:1px 6px;border-radius:99px;font-weight:600;color:#fff;font-size:9.5px;text-transform:uppercase;letter-spacing:0.03em;}
+.src-tag.eleat{background:var(--eleat);}
+.src-tag.yogabar{background:var(--yoga);}
+
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
+</style></head><body><div class="wrap">
+
+<div class="crumb"><a href="../">← All briefs</a></div>
+<header>
+  <h1>Format Library</h1>
+  <div class="sub">14 reusable creative formats, 31 example creatives (23 Eleat · 8 Yogabar). Pick a format and any compatible angle's headline can ride it.</div>
+</header>
+
+<nav class="nav"><a class="navchip" href="#A">A · Bundle</a>
+<a class="navchip" href="#B">B · Factory</a>
+<a class="navchip" href="#C">C · Studio Launch</a>
+<a class="navchip" href="#D">D · Studio Clean</a>
+<a class="navchip" href="#E">E · IG Story Testimonial</a>
+<a class="navchip" href="#F">F · UGC Top-Down Bowl</a>
+<a class="navchip" href="#G">G · UGC Hold</a>
+<a class="navchip" href="#H">H · Meal-Prep Grid</a>
+<a class="navchip" href="#I">I · Q&amp;A in Shipping Box</a>
+<a class="navchip" href="#J">J · Studio Hero</a>
+<a class="navchip" href="#K">K · Studio Product Flat</a>
+<a class="navchip" href="#L">L · Usage Occasion</a>
+<a class="navchip" href="#M">M · Lifestyle Model</a>
+<a class="navchip" href="#N">N · Product Lineup</a></nav>
+
+<section class="archetype" id="A">
+      <div class="arch-head">
+        <div class="arch-id">A</div>
+        <div class="arch-titlebox">
+          <h2>Bundle / Product Line Flat-Lay</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N3</span> <span class="pill angle">N4</span> <span class="pill angle">N5</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Multiple SKUs together = perceived value + lets browsers self-select. Best for retargeting / line introduction.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · multi-line caption · no ribbon · star/burst badge optional</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_1488950192649183.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1488950192649183</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_990864410044104.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">990864410044104</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1442329427197452.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1442329427197452</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="B">
+      <div class="arch-head">
+        <div class="arch-id">B</div>
+        <div class="arch-titlebox">
+          <h2>Factory / Production-Line Hold</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N3</span> <span class="pill angle">N5</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Gloved hand + stainless-steel BG = &#x27;made fresh, quality control&#x27;. Builds trust for the label-reader segment.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Short headline (top) · no badges · single hook line</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_25116478524689097.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">25116478524689097</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_4086247308307268.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">4086247308307268</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="C">
+      <div class="arch-head">
+        <div class="arch-id">C</div>
+        <div class="arch-titlebox">
+          <h2>Studio Launch — Diagonal Banner</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N2</span> <span class="pill angle">N3</span> <span class="pill angle">N4</span> <span class="pill angle">N5</span> <span class="pill angle">N6</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Solid color BG with diagonal &#x27;New flavour&#x27; ribbon top + bottom. Launch buzz; signals movement in a static.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Headline 2-3 lines stacked · sub line · ribbon text (top+bottom)</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_959189300618577.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">959189300618577</span></div>
+        </div><div class="ex">
+          <img src="source-ads/yogabar_2187862961952855.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">2187862961952855</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="D">
+      <div class="arch-head">
+        <div class="arch-id">D</div>
+        <div class="arch-titlebox">
+          <h2>Studio Clean — Solid BG + Badges</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N2</span> <span class="pill angle">N3</span> <span class="pill angle">N4</span> <span class="pill angle">N5</span> <span class="pill angle">N6</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Solid white/red/black BG, pack + bowl, three claim circles. The workhorse — headline-led, claim-stacked, infinitely re-skinnable.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · sub 1 line · three white circle badges (left or right rail)</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_2871430599865769.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">2871430599865769</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1515430366742541.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1515430366742541</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1371820251663917.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1371820251663917</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="E">
+      <div class="arch-head">
+        <div class="arch-id">E</div>
+        <div class="arch-titlebox">
+          <h2>IG Story Testimonial</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N5</span> <span class="pill angle">N6</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Phone-frame Instagram story with creator + quote overlays. High social-proof power for problem-aware segments.</p>
+      <div class="slots"><span class="label">Copy slots:</span> 3-4 black quote boxes (60 char max each) · creator handle · status bar chrome</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_1412228180373751.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1412228180373751</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_864476073332826.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">864476073332826</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_943144168350891.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">943144168350891</span></div>
+        </div><div class="ex">
+          <img src="source-ads/yogabar_1184559470106991.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1184559470106991</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="F">
+      <div class="arch-head">
+        <div class="arch-id">F</div>
+        <div class="arch-titlebox">
+          <h2>UGC Top-Down Bowl</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N4</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Hand holds bowl shot from above, granola + fruit + drizzle. Tastes-good signal; cheap to vary by ingredient.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Short handwritten caption (top-left) · creator handle · 0-2 small badges</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_1422830539322821.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1422830539322821</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_2723423458016644.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">2723423458016644</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1340326798001102.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1340326798001102</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1888671758460135.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1888671758460135</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="G">
+      <div class="arch-head">
+        <div class="arch-id">G</div>
+        <div class="arch-titlebox">
+          <h2>UGC Hold — Real Setting</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N5</span> <span class="pill angle">N6</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Hand holds pack/branded cup in cafe / home / gym / outdoor. Most relatable archetype; carries math/explainer copy well.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Handwritten-style overlay · 4-7 lines of math or copy · setting matters as much as words</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_4097736017036725.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">4097736017036725</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_1873043616888676.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">1873043616888676</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_899435403079459.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">899435403079459</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_3408192669333959.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">3408192669333959</span></div>
+        </div><div class="ex">
+          <img src="source-ads/eleat_952901150813468.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">952901150813468</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="H">
+      <div class="arch-head">
+        <div class="arch-id">H</div>
+        <div class="arch-titlebox">
+          <h2>Meal-Prep Grid</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N6</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Top-down 6-tupperware grid + pack tucked in. Perfect for the &#x27;busy parent / Sunday-prep&#x27; time-poverty angle.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Multiple small callouts pointing to each container · headline top · caption mid</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_717669104768051.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">717669104768051</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="I">
+      <div class="arch-head">
+        <div class="arch-id">I</div>
+        <div class="arch-titlebox">
+          <h2>Q&amp;A in Shipping Box</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N5</span> <span class="pill angle">N6</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Open shipping box with packs, IG question sticker top, black answer boxes stacked. Founder/expert voice format.</p>
+      <div class="slots"><span class="label">Copy slots:</span> IG question pill (top) · 2-3 black answer boxes · &#x27;free pot via link&#x27; style CTA</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/eleat_922797993630676.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-id">922797993630676</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="J">
+      <div class="arch-head">
+        <div class="arch-id">J</div>
+        <div class="arch-titlebox">
+          <h2>Studio Hero — Dramatic Prop</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N2</span> <span class="pill angle">N3</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Bright solid BG + dramatic reveal (gold cloche, falling fruit). Highest stopping power in feed; for category-defining moments.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Headline 2-3 lines (stacked, mixed weight) · burst/diagonal price badge · hand entering frame</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/yogabar_2187862961952855.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">2187862961952855</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="K">
+      <div class="arch-head">
+        <div class="arch-id">K</div>
+        <div class="arch-titlebox">
+          <h2>Studio Product Flat — Floating Packs</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N3</span> <span class="pill angle">N5</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Multiple pack variants floating on solid color BG with ingredients scattered. Communicates &#x27;family of products / clean ingredients&#x27;.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Bold typography overlay (2-3 word phrases) · no badges · scattered raw ingredients as props</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/yogabar_710410552008941.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">710410552008941</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="L">
+      <div class="arch-head">
+        <div class="arch-id">L</div>
+        <div class="arch-titlebox">
+          <h2>Usage Occasion — Pack + Finished Use</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Pack next to the prepared product (coffee glass, bowl, shake). Shows the &#x27;after&#x27; moment — what the buyer actually gets.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Headline 2 lines (italic-styled sub) · 2-3 pill callouts (e.g. &#x27;No Added Sugar&#x27;) · burst price badge</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/yogabar_1600791537716955.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1600791537716955</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="M">
+      <div class="arch-head">
+        <div class="arch-id">M</div>
+        <div class="arch-titlebox">
+          <h2>Lifestyle Model — Poppy Hero</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N1</span> <span class="pill angle">N4</span> <span class="pill angle">N7</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Model + pack on vibrant fashion BG (pink/yellow). Retro-poppy display headlines. Skews young, accessible, snackable.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Huge display headline (3-4 lines, mixed weights) · 2 star/burst badges · pack held toward camera</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/yogabar_899179513108818.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">899179513108818</span></div>
+        </div><div class="ex">
+          <img src="source-ads/yogabar_2361588144343200.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">2361588144343200</span></div>
+        </div></div>
+    </section>
+<section class="archetype" id="N">
+      <div class="arch-head">
+        <div class="arch-id">N</div>
+        <div class="arch-titlebox">
+          <h2>Product Lineup — SKU Stack</h2>
+          <div class="arch-meta">
+            <span class="label">Fits angles:</span> <span class="pill angle">N3</span> <span class="pill angle">N4</span>
+          </div>
+        </div>
+      </div>
+      <p class="works">Multiple SKUs of the same product line stacked/spread, no model. Pure product-led; perfect for combo or variety pack pushes.</p>
+      <div class="slots"><span class="label">Copy slots:</span> Minimal copy · big SKU count callout (e.g. &#x27;24 PACK&#x27;) · 2 claim pills</div>
+      <div class="examples"><div class="ex">
+          <img src="source-ads/yogabar_1040308631769200.jpg" loading="lazy" alt="">
+          <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1040308631769200</span></div>
+        </div></div>
+    </section>
+
+<footer>Source ads scraped from Meta Ad Library · Eleat (page 101586282442219) · Yogabar (page 336994479721509).</footer>
+</div></body></html>
