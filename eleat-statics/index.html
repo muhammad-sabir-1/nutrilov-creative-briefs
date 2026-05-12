@@ -381,5 +381,11 @@ filterBtns.forEach(b => b.addEventListener('click', () => {
   });
 }));
 
-// no-op
+// Open a brief from URL hash (e.g. ../formats/ → #1234567890)
+function openFromHash(){
+  const id = location.hash.replace('#','').trim();
+  if (id && BRIEFS[id]) openPanel(id);
+}
+openFromHash();
+window.addEventListener('hashchange', openFromHash);
 </script></body></html>
