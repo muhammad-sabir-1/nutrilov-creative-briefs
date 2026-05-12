@@ -38,8 +38,10 @@ h1{font-size:28px;margin:0 0 4px;letter-spacing:-0.01em;}
 .variant-row{padding:10px 12px;border-left:2px solid var(--line);margin-bottom:10px;}
 .variant-head{margin-bottom:6px;font-size:13px;}
 .vdesc{color:var(--muted);font-size:12.5px;}
-.ex{background:#f7f3e9;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s;}
-a.ex:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.08);}
+.ex{background:#f7f3e9;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s;border:0;padding:0;text-align:left;font:inherit;width:100%;}
+button.ex{cursor:pointer;}
+button.ex:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.08);}
+.ex.static{cursor:default;}
 .ex img{width:100%;aspect-ratio:1080/1350;object-fit:cover;background:#eee;display:block;}
 .ex-meta{padding:5px 8px 6px;font-size:10.5px;display:flex;justify-content:space-between;align-items:center;gap:6px;}
 .ex-id{color:var(--muted);font-family:ui-monospace,monospace;font-size:10px;}
@@ -49,6 +51,39 @@ a.ex:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.08);}
 .src-tag.yogabar{background:var(--yoga);}
 
 footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
+
+/* ─── inline brief side panel ─── */
+.panel{position:fixed;top:0;right:0;width:min(760px,100vw);height:100vh;background:var(--bg);border-left:1px solid var(--line);box-shadow:-12px 0 32px rgba(0,0,0,.06);transform:translateX(100%);transition:transform .25s ease-out;overflow-y:auto;z-index:50;}
+.panel.open{transform:translateX(0);}
+.panel-header{position:sticky;top:0;background:var(--bg);padding:14px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:2;}
+.panel-header h2{margin:0;font-size:16px;font-weight:600;}
+.panel-close{background:none;border:0;font-size:24px;cursor:pointer;color:var(--muted);padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:6px;}
+.panel-close:hover{background:var(--line);color:var(--ink);}
+.panel-body{padding:20px 24px 60px;display:grid;grid-template-columns:260px 1fr;gap:22px;}
+@media(max-width:680px){.panel-body{grid-template-columns:1fr;}}
+.panel-img img{width:100%;border-radius:8px;border:1px solid var(--line);}
+.panel-img a{font-size:12px;color:var(--muted);display:block;margin-top:8px;}
+.panel-content h3{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin:16px 0 6px;}
+.panel-content h3:first-child{margin-top:0;}
+.panel-content .block{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13px;line-height:1.55;}
+.panel-content .block ul{margin:0;padding-left:18px;}
+.panel-content .block li{margin:2px 0;}
+.panel-content .sublabel{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin:8px 0 3px;}
+.panel-content .sublabel:first-of-type{margin-top:0;}
+.copy-row{display:flex;align-items:center;gap:8px;margin-top:6px;}
+.copy-btn{background:var(--line);border:0;padding:3px 8px;border-radius:4px;cursor:pointer;font-size:11px;color:var(--ink);}
+.copy-btn:hover{background:var(--ink);color:#fff;}
+.variants-list{display:flex;flex-direction:column;gap:10px;}
+.variant{border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 14px;}
+.variant-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px;font-size:12px;}
+.variant-head .vlabel{font-weight:600;font-size:13px;}
+.variant-head .vdims{color:var(--muted);font-size:11.5px;}
+.variant .vheadline{font-size:14px;font-weight:600;margin-bottom:4px;}
+.variant .vsub{font-size:13px;color:#333;}
+.variant .vribbon{font-size:11.5px;color:var(--muted);margin-top:6px;font-style:italic;}
+.variant .vrow{display:flex;justify-content:flex-end;margin-top:8px;}
+.backdrop{position:fixed;inset:0;background:rgba(20,18,12,.18);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40;}
+.backdrop.open{opacity:1;pointer-events:auto;}
 </style></head><body><div class="wrap">
 
 <div class="crumb"><a href="../">← All briefs</a></div>
@@ -81,16 +116,16 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Multiple SKUs together = perceived value + lets browsers self-select. Best for retargeting / line introduction.</p><div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · multi-line caption · no ribbon · star/burst badge optional</div><div class="examples"><a class="ex" href="../eleat-statics/#1488950192649183" title="Open worked brief">
+      <p class="works">Multiple SKUs together = perceived value + lets browsers self-select. Best for retargeting / line introduction.</p><div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · multi-line caption · no ribbon · star/burst badge optional</div><div class="examples"><button class="ex" data-brief-id="1488950192649183" title="Open worked brief">
               <img src="source-ads/eleat_1488950192649183.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#990864410044104" title="Open worked brief">
+            </button><button class="ex" data-brief-id="990864410044104" title="Open worked brief">
               <img src="source-ads/eleat_990864410044104.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1442329427197452" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1442329427197452" title="Open worked brief">
               <img src="source-ads/eleat_1442329427197452.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="B">
       <div class="arch-head">
@@ -102,13 +137,13 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Gloved hand + stainless-steel BG = &#x27;made fresh, quality control&#x27;. Builds trust for the label-reader segment.</p><div class="slots"><span class="label">Copy slots:</span> Short headline (top) · no badges · single hook line</div><div class="examples"><a class="ex" href="../eleat-statics/#25116478524689097" title="Open worked brief">
+      <p class="works">Gloved hand + stainless-steel BG = &#x27;made fresh, quality control&#x27;. Builds trust for the label-reader segment.</p><div class="slots"><span class="label">Copy slots:</span> Short headline (top) · no badges · single hook line</div><div class="examples"><button class="ex" data-brief-id="25116478524689097" title="Open worked brief">
               <img src="source-ads/eleat_25116478524689097.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#4086247308307268" title="Open worked brief">
+            </button><button class="ex" data-brief-id="4086247308307268" title="Open worked brief">
               <img src="source-ads/eleat_4086247308307268.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="C">
       <div class="arch-head">
@@ -120,13 +155,13 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Solid color BG, pack hero, optional drama (launch ribbon, prop reveal, or simple pack-beside-bowl). Workhorse studio format.</p><div class="slots"><span class="label">Copy slots:</span> Headline 2-3 lines · sub line · optional diagonal ribbon OR dramatic prop OR neither</div><div class="examples"><a class="ex" href="../eleat-statics/#959189300618577" title="Open worked brief">
+      <p class="works">Solid color BG, pack hero, optional drama (launch ribbon, prop reveal, or simple pack-beside-bowl). Workhorse studio format.</p><div class="slots"><span class="label">Copy slots:</span> Headline 2-3 lines · sub line · optional diagonal ribbon OR dramatic prop OR neither</div><div class="examples"><button class="ex" data-brief-id="959189300618577" title="Open worked brief">
               <img src="source-ads/eleat_959189300618577.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><div class="ex">
+            </button><div class="ex static">
               <img src="source-ads/yogabar_2187862961952855.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">2187862961952855</span></div>
-            </div><div class="ex">
+            </div><div class="ex static">
               <img src="source-ads/yogabar_1184559470106991.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1184559470106991</span></div>
             </div></div>
@@ -141,16 +176,16 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Solid white/red/black BG, pack + bowl, three claim circles. The workhorse — headline-led, claim-stacked, infinitely re-skinnable.</p><div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · sub 1 line · three white circle badges (left or right rail)</div><div class="examples"><a class="ex" href="../eleat-statics/#2871430599865769" title="Open worked brief">
+      <p class="works">Solid white/red/black BG, pack + bowl, three claim circles. The workhorse — headline-led, claim-stacked, infinitely re-skinnable.</p><div class="slots"><span class="label">Copy slots:</span> Headline 1-2 lines · sub 1 line · three white circle badges (left or right rail)</div><div class="examples"><button class="ex" data-brief-id="2871430599865769" title="Open worked brief">
               <img src="source-ads/eleat_2871430599865769.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1515430366742541" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1515430366742541" title="Open worked brief">
               <img src="source-ads/eleat_1515430366742541.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1371820251663917" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1371820251663917" title="Open worked brief">
               <img src="source-ads/eleat_1371820251663917.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="E">
       <div class="arch-head">
@@ -162,16 +197,16 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Phone-frame Instagram story with creator + quote overlays. High social-proof power for problem-aware segments.</p><div class="slots"><span class="label">Copy slots:</span> 3-4 black quote boxes (60 char max each) · creator handle · status bar chrome</div><div class="examples"><a class="ex" href="../eleat-statics/#1412228180373751" title="Open worked brief">
+      <p class="works">Phone-frame Instagram story with creator + quote overlays. High social-proof power for problem-aware segments.</p><div class="slots"><span class="label">Copy slots:</span> 3-4 black quote boxes (60 char max each) · creator handle · status bar chrome</div><div class="examples"><button class="ex" data-brief-id="1412228180373751" title="Open worked brief">
               <img src="source-ads/eleat_1412228180373751.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#864476073332826" title="Open worked brief">
+            </button><button class="ex" data-brief-id="864476073332826" title="Open worked brief">
               <img src="source-ads/eleat_864476073332826.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#943144168350891" title="Open worked brief">
+            </button><button class="ex" data-brief-id="943144168350891" title="Open worked brief">
               <img src="source-ads/eleat_943144168350891.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><div class="ex">
+            </button><div class="ex static">
               <img src="source-ads/yogabar_1184559470106991.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1184559470106991</span></div>
             </div></div>
@@ -186,19 +221,19 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Hand holds bowl shot from above, granola + fruit + drizzle. Tastes-good signal; cheap to vary by ingredient.</p><div class="slots"><span class="label">Copy slots:</span> Short handwritten caption (top-left) · creator handle · 0-2 small badges</div><div class="examples"><a class="ex" href="../eleat-statics/#1422830539322821" title="Open worked brief">
+      <p class="works">Hand holds bowl shot from above, granola + fruit + drizzle. Tastes-good signal; cheap to vary by ingredient.</p><div class="slots"><span class="label">Copy slots:</span> Short handwritten caption (top-left) · creator handle · 0-2 small badges</div><div class="examples"><button class="ex" data-brief-id="1422830539322821" title="Open worked brief">
               <img src="source-ads/eleat_1422830539322821.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#2723423458016644" title="Open worked brief">
+            </button><button class="ex" data-brief-id="2723423458016644" title="Open worked brief">
               <img src="source-ads/eleat_2723423458016644.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1340326798001102" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1340326798001102" title="Open worked brief">
               <img src="source-ads/eleat_1340326798001102.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1888671758460135" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1888671758460135" title="Open worked brief">
               <img src="source-ads/eleat_1888671758460135.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="G">
       <div class="arch-head">
@@ -210,22 +245,22 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Hand holds pack/branded cup in cafe / home / gym / outdoor. Most relatable archetype; carries math/explainer copy well.</p><div class="slots"><span class="label">Copy slots:</span> Handwritten-style overlay · 4-7 lines of math or copy · setting matters as much as words</div><div class="examples"><a class="ex" href="../eleat-statics/#4097736017036725" title="Open worked brief">
+      <p class="works">Hand holds pack/branded cup in cafe / home / gym / outdoor. Most relatable archetype; carries math/explainer copy well.</p><div class="slots"><span class="label">Copy slots:</span> Handwritten-style overlay · 4-7 lines of math or copy · setting matters as much as words</div><div class="examples"><button class="ex" data-brief-id="4097736017036725" title="Open worked brief">
               <img src="source-ads/eleat_4097736017036725.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#1873043616888676" title="Open worked brief">
+            </button><button class="ex" data-brief-id="1873043616888676" title="Open worked brief">
               <img src="source-ads/eleat_1873043616888676.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#899435403079459" title="Open worked brief">
+            </button><button class="ex" data-brief-id="899435403079459" title="Open worked brief">
               <img src="source-ads/eleat_899435403079459.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#3408192669333959" title="Open worked brief">
+            </button><button class="ex" data-brief-id="3408192669333959" title="Open worked brief">
               <img src="source-ads/eleat_3408192669333959.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a><a class="ex" href="../eleat-statics/#952901150813468" title="Open worked brief">
+            </button><button class="ex" data-brief-id="952901150813468" title="Open worked brief">
               <img src="source-ads/eleat_952901150813468.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="H">
       <div class="arch-head">
@@ -237,10 +272,10 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Top-down 6-tupperware grid + pack tucked in. Perfect for the &#x27;busy parent / Sunday-prep&#x27; time-poverty angle.</p><div class="slots"><span class="label">Copy slots:</span> Multiple small callouts pointing to each container · headline top · caption mid</div><div class="examples"><a class="ex" href="../eleat-statics/#717669104768051" title="Open worked brief">
+      <p class="works">Top-down 6-tupperware grid + pack tucked in. Perfect for the &#x27;busy parent / Sunday-prep&#x27; time-poverty angle.</p><div class="slots"><span class="label">Copy slots:</span> Multiple small callouts pointing to each container · headline top · caption mid</div><div class="examples"><button class="ex" data-brief-id="717669104768051" title="Open worked brief">
               <img src="source-ads/eleat_717669104768051.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="I">
       <div class="arch-head">
@@ -252,10 +287,10 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Open shipping box with packs, IG question sticker top, black answer boxes stacked. Founder/expert voice format.</p><div class="slots"><span class="label">Copy slots:</span> IG question pill (top) · 2-3 black answer boxes · &#x27;free pot via link&#x27; style CTA</div><div class="examples"><a class="ex" href="../eleat-statics/#922797993630676" title="Open worked brief">
+      <p class="works">Open shipping box with packs, IG question sticker top, black answer boxes stacked. Founder/expert voice format.</p><div class="slots"><span class="label">Copy slots:</span> IG question pill (top) · 2-3 black answer boxes · &#x27;free pot via link&#x27; style CTA</div><div class="examples"><button class="ex" data-brief-id="922797993630676" title="Open worked brief">
               <img src="source-ads/eleat_922797993630676.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag eleat">Eleat</span><span class="ex-cta">Open brief →</span></div>
-            </a></div>
+            </button></div>
     </section>
 <section class="archetype" id="K">
       <div class="arch-head">
@@ -267,7 +302,7 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Multiple pack variants floating on solid color BG with ingredients scattered. Communicates &#x27;family of products / clean ingredients&#x27;.</p><div class="slots"><span class="label">Copy slots:</span> Bold typography overlay (2-3 word phrases) · no badges · scattered raw ingredients as props</div><div class="examples"><div class="ex">
+      <p class="works">Multiple pack variants floating on solid color BG with ingredients scattered. Communicates &#x27;family of products / clean ingredients&#x27;.</p><div class="slots"><span class="label">Copy slots:</span> Bold typography overlay (2-3 word phrases) · no badges · scattered raw ingredients as props</div><div class="examples"><div class="ex static">
               <img src="source-ads/yogabar_710410552008941.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">710410552008941</span></div>
             </div></div>
@@ -282,7 +317,7 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Pack next to the prepared product (coffee glass, bowl, shake). Shows the &#x27;after&#x27; moment — what the buyer actually gets.</p><div class="slots"><span class="label">Copy slots:</span> Headline 2 lines (italic-styled sub) · 2-3 pill callouts (e.g. &#x27;No Added Sugar&#x27;) · burst price badge</div><div class="examples"><div class="ex">
+      <p class="works">Pack next to the prepared product (coffee glass, bowl, shake). Shows the &#x27;after&#x27; moment — what the buyer actually gets.</p><div class="slots"><span class="label">Copy slots:</span> Headline 2 lines (italic-styled sub) · 2-3 pill callouts (e.g. &#x27;No Added Sugar&#x27;) · burst price badge</div><div class="examples"><div class="ex static">
               <img src="source-ads/yogabar_1600791537716955.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1600791537716955</span></div>
             </div></div>
@@ -297,10 +332,10 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Model + pack on vibrant fashion BG (pink/yellow). Retro-poppy display headlines. Skews young, accessible, snackable.</p><div class="slots"><span class="label">Copy slots:</span> Huge display headline (3-4 lines, mixed weights) · 2 star/burst badges · pack held toward camera</div><div class="examples"><div class="ex">
+      <p class="works">Model + pack on vibrant fashion BG (pink/yellow). Retro-poppy display headlines. Skews young, accessible, snackable.</p><div class="slots"><span class="label">Copy slots:</span> Huge display headline (3-4 lines, mixed weights) · 2 star/burst badges · pack held toward camera</div><div class="examples"><div class="ex static">
               <img src="source-ads/yogabar_899179513108818.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">899179513108818</span></div>
-            </div><div class="ex">
+            </div><div class="ex static">
               <img src="source-ads/yogabar_2361588144343200.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">2361588144343200</span></div>
             </div></div>
@@ -315,11 +350,131 @@ footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:v
           </div>
         </div>
       </div>
-      <p class="works">Multiple SKUs of the same product line stacked/spread, no model. Pure product-led; perfect for combo or variety pack pushes.</p><div class="slots"><span class="label">Copy slots:</span> Minimal copy · big SKU count callout (e.g. &#x27;24 PACK&#x27;) · 2 claim pills</div><div class="examples"><div class="ex">
+      <p class="works">Multiple SKUs of the same product line stacked/spread, no model. Pure product-led; perfect for combo or variety pack pushes.</p><div class="slots"><span class="label">Copy slots:</span> Minimal copy · big SKU count callout (e.g. &#x27;24 PACK&#x27;) · 2 claim pills</div><div class="examples"><div class="ex static">
               <img src="source-ads/yogabar_1040308631769200.jpg" loading="lazy" alt="">
               <div class="ex-meta"><span class="src-tag yogabar">Yogabar</span><span class="ex-id">1040308631769200</span></div>
             </div></div>
     </section>
 
 <footer>Source ads scraped from Meta Ad Library · Eleat (page 101586282442219) · Yogabar (page 336994479721509).</footer>
-</div></body></html>
+</div>
+
+<div class="backdrop" id="backdrop"></div>
+<aside class="panel" id="panel" aria-hidden="true">
+  <div class="panel-header">
+    <h2 id="panelTitle">Brief</h2>
+    <button class="panel-close" id="panelClose" aria-label="Close">×</button>
+  </div>
+  <div class="panel-body">
+    <div class="panel-img">
+      <img id="panelImg" src="" alt="Source ad">
+      <a id="panelSourceLink" href="#" target="_blank">View on FB Ad Library →</a>
+    </div>
+    <div class="panel-content">
+      <h3>Format</h3>
+      <div class="block" id="panelFormat"></div>
+      <h3>Copy</h3>
+      <div class="block">
+        <div class="sublabel">Image copy (overlay)</div>
+        <ul id="panelImageCopy"></ul>
+        <div class="copy-row"><button class="copy-btn" data-copy="image_copy">Copy</button></div>
+        <div class="sublabel">Caption</div>
+        <div id="panelCaption"></div>
+        <div class="copy-row"><button class="copy-btn" data-copy="caption">Copy</button></div>
+        <div class="sublabel">CTA</div>
+        <div id="panelCta"></div>
+      </div>
+      <h3>Visual</h3>
+      <div class="block" id="panelVisual"></div>
+      <div id="panelVariantsWrap" style="display:none;">
+        <h3>Variants <span id="panelVariantsCount" style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0;"></span></h3>
+        <div class="variants-list" id="panelVariants"></div>
+      </div>
+      <h3>Archetype</h3>
+      <div class="block" id="panelArch"></div>
+    </div>
+  </div>
+</aside>
+
+<script>
+const BRIEFS = {"4097736017036725": {"id": "eleat-4097736017036725", "title": "How I get 20g protein for breakfast", "archetype": "F-UGC-hold", "days": 15, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["How I get 20g protein for breakfast?", "50g Nutrilov Protein Granola \u2014 12g", "220ml milk \u2014 8g", "Prep time \u2014 90 seconds", "Full till lunch. No 11am biscuit reflex. \ud83d\udc9a"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match UGC handheld cafe vibe. Swap ELEAT cup for Nutrilov Protein Granola bowl/pack (deep red + black geometric triangle pattern visible). Keep warm-interior + window light feel.", "source_url": "https://www.facebook.com/ads/library/?id=4097736017036725", "image": "source-ads/eleat_4097736017036725.jpg", "variants": []}, "1488950192649183": {"id": "eleat-1488950192649183", "title": "Welcome Pack", "archetype": "A-Bundle", "days": 157, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Nutrilov Welcome Pack", "1\u00d7 Protein Granola 400g", "1\u00d7 Protein Bar Box (10\u00d750g)", "1\u00d7 Cereal Honey Almond", "1\u00d7 Nutrilov bowl + spoon", "All for Rs. 4,200 (save Rs. 800)"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match welcome-box flat-lay on kitchen counter. Swap ELEAT pouches for full Nutrilov line \u2014 Protein Granola (red), Protein Bar (red/black), Cereal Honey Almond. Add Nutrilov branded bowl. Keep cardboard-box-on-marble setting.", "source_url": "https://www.facebook.com/ads/library/?id=1488950192649183", "image": "source-ads/eleat_1488950192649183.jpg", "variants": []}, "25116478524689097": {"id": "eleat-25116478524689097", "title": "Trying out the new breakfast \u2014 Choco Almond", "archetype": "B-FactoryHold", "days": 158, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Trying out Pakistan's first 20g Protein Granola \ud83c\uddf5\ud83c\uddf0", "Choco Almond. With milk, almost 24g protein. Very impressed."], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match factory/production-line behind-the-scenes hold. Gloved hand holds Nutrilov Protein Granola pack (deep red + black triangles). Industrial background \u2014 stainless steel, packing line. Builds 'made-in-PK' credibility.", "source_url": "https://www.facebook.com/ads/library/?id=25116478524689097", "image": "source-ads/eleat_25116478524689097.jpg", "variants": []}, "4086247308307268": {"id": "eleat-4086247308307268", "title": "Bestseller fresh off the production line", "archetype": "B-FactoryHold", "days": 151, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Our bestseller \u2014 Choco Almond Protein Granola", "Fresh off the production line \ud83d\ude0d"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Same factory/production hold archetype. Gloved hand holds Nutrilov Protein Granola pack. Stainless prep table backdrop. Position as 'made fresh in PK, premium inputs'.", "source_url": "https://www.facebook.com/ads/library/?id=4086247308307268", "image": "source-ads/eleat_4086247308307268.jpg", "variants": []}, "959189300618577": {"id": "eleat-959189300618577", "title": "Studio Launch \u2014 headline variants", "archetype": "C-StudioLaunch", "days": 73, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Protein never tasted this good", "20g of protein per bowl", "New flavour now live! New flavour now live!"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match studio launch composition: solid color backdrop (use Nutrilov red #C62828 OR contrast teal/cream \u2014 designer call), pack + bowl + spoon arrangement, optional diagonal 'New flavour' banner ribbons top + bottom. Nutrilov Protein Granola pack + bowl. Clean studio lighting. Test 5 headline variants \u00d7 3 dimensions \u2014 see Variants section below.", "source_url": "https://www.facebook.com/ads/library/?id=959189300618577", "image": "source-ads/eleat_959189300618577.jpg", "variants": [{"label": "v1 \u2014 Flavour launch (original)", "headline": "Protein never tasted this good", "sub": "20g of protein per bowl", "ribbon": "New flavour now live!", "dimensions": "1080\u00d71920 + 1080\u00d71350"}, {"label": "v2 \u2014 No time hook", "headline": "No time for breakfast? No problem.", "sub": "90 seconds. 20g protein.", "ribbon": null, "dimensions": "1080\u00d71080 (1:1)"}, {"label": "v3 \u2014 Category claim", "headline": "Pakistan's first 20g Protein Granola", "sub": "All natural. No added sugar.", "ribbon": null, "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71350 (4:5)"}, {"label": "v4 \u2014 Skip cooking", "headline": "Skip cooking. Not breakfast.", "sub": "20g protein in 90 seconds.", "ribbon": null, "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71920 (9:16)"}, {"label": "v5 \u2014 Urdu code-switch", "headline": "Nashta karne ka time nahi? Ab hai.", "sub": "90 seconds. 20g protein.", "ribbon": null, "dimensions": "1080\u00d71080 (1:1)"}]}, "1412228180373751": {"id": "eleat-1412228180373751", "title": "I'm still absolutely obsessed", "archetype": "E-IGTestimonial", "days": 97, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["I'm still absolutely obsessed with @nutrilov \ud83c\uddf5\ud83c\uddf0", "I was looking for an easy, high protein breakfast which tasted good and I could take to work.", "I have Nutrilov Protein Granola almost everyday and it keeps me full, it's tasty and so good for you!", "Whilst this was shared, I have purchased previously and I'm under no obligation to post \u2014 Nutrilov is definitely one I'd recommend."], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match IG-story testimonial archetype: phone-screen frame (status bar 10:52), Instagram story chrome (profile pill, follow button, comment bar), creator pack-hold photo in background with 3-4 black quote overlay boxes. Swap ELEAT pack for Nutrilov Protein Granola. PK creator handle preferred.", "source_url": "https://www.facebook.com/ads/library/?id=1412228180373751", "image": "source-ads/eleat_1412228180373751.jpg", "variants": []}, "864476073332826": {"id": "eleat-864476073332826", "title": "Quote overlay on pack hold", "archetype": "E-IGTestimonial", "days": 2, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["I saw an Instagram ad one day and I was looking for an easy, high protein breakfast which tasted good and I could take to work", "I have Nutrilov Protein Granola almost everyday and I find it keeps me full, it's tasty and so good for you!", "Whilst this was shared, I have purchased previously with my own money and I'm under no obligation to post. But I do want to share products that work for me \u2014 and Nutrilov is most definitely one of them!"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Cleaner version of E-IGTestimonial (no phone chrome). Just the pack hold + black quote boxes overlaid. Swap ELEAT pack for Nutrilov Protein Granola. Tile floor / domestic setting.", "source_url": "https://www.facebook.com/ads/library/?id=864476073332826", "image": "source-ads/eleat_864476073332826.jpg", "variants": []}, "943144168350891": {"id": "eleat-943144168350891", "title": "Obsessed (variant)", "archetype": "E-IGTestimonial", "days": 16, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["I'm still absolutely obsessed with @nutrilov \ud83c\uddf5\ud83c\uddf0", "I was looking for an easy, high protein breakfast which tasted good and I could take to work.", "Almost everyday \u2014 keeps me full, it's tasty and so good for you.", "Disclosed: this was shared with me. I'd buy it anyway."], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Same as 1412228 (IG phone frame + quote overlays). Variant for A/B testing. Different creator hand/skin tone to widen relatability.", "source_url": "https://www.facebook.com/ads/library/?id=943144168350891", "image": "source-ads/eleat_943144168350891.jpg", "variants": []}, "1422830539322821": {"id": "eleat-1422830539322821", "title": "Every single day \u2014 Protein Granola", "archetype": "F-BowlTopdown", "days": 61, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["@nutrilov EVERY SINGLE DAY", "High protein granola bowl \ud83e\udd63", "Macros: 20g protein per serve"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match top-down handheld tupperware/bowl shot with plant background. Swap eleat oats prep for Nutrilov Protein Granola + milk + raspberry + dark chocolate chunks + peanut butter drizzle. Same hand-tilt angle, same plant backdrop.", "source_url": "https://www.facebook.com/ads/library/?id=1422830539322821", "image": "source-ads/eleat_1422830539322821.jpg", "variants": []}, "2723423458016644": {"id": "eleat-2723423458016644", "title": "Switched up my Protein Granola", "archetype": "F-BowlTopdown", "days": 71, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Switched up my Protein Granola \ud83d\ude0d", "These were so so good \u2014 @nutrilov"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Top-down tupperware bowl + Nutrilov Protein Granola pack tucked into bottom-right corner. Fresh berries (raspberry + blackberry) on top of granola. Hand holding from below. Gym/concrete floor backdrop.", "source_url": "https://www.facebook.com/ads/library/?id=2723423458016644", "image": "source-ads/eleat_2723423458016644.jpg", "variants": []}, "944220418132018": {"id": "eleat-944220418132018", "title": "Why I switched \u2014 5 reasons", "archetype": "F-BowlTopdown", "days": 72, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["\u2705 20g protein", "\u2705 0g added sugar", "\u2705 High fibre", "\u2705 BC30 probiotic", "\u2705 Halal \u2014 no gelatin", "@nutrilov"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Top-down: Nutrilov Protein Granola pack laid flat + bowl with milk + berries. 5 green checkmark callouts down the right side. Kitchen counter / domestic backdrop.", "source_url": "https://www.facebook.com/ads/library/?id=944220418132018", "image": "source-ads/eleat_944220418132018.jpg", "variants": []}, "1340326798001102": {"id": "eleat-1340326798001102", "title": "Busy day = big breakfast", "archetype": "F-BowlTopdown", "days": 7, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["busy day = big breakfast \ud83e\udd63\ud83c\uddf5\ud83c\uddf0", "@nutrilov", "Protein Granola \u2764\ufe0f"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Top-down white bowl on outdoor patio tile. Granola + yogurt swirl + sliced strawberries. Wrist with bracelets visible holding the bowl. Plants out of focus. Outdoor PK home aesthetic \u2014 courtyard or terrace.", "source_url": "https://www.facebook.com/ads/library/?id=1340326798001102", "image": "source-ads/eleat_1340326798001102.jpg", "variants": []}, "1888671758460135": {"id": "eleat-1888671758460135", "title": "Big ol bowl of Protein Granola", "archetype": "F-BowlTopdown", "days": 7, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["big ol bowl of Protein Granola this morn \ud83c\uddf5\ud83c\uddf0", "@nutrilov", "20% OFF PROTEIN GRANOLA \u2014 20g protein per bowl"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Top-down white bowl on tile floor. Granola + milk + apples + raspberries + blueberries + cinnamon dust. Feet/sandals just visible in frame edge. Casual UGC.", "source_url": "https://www.facebook.com/ads/library/?id=1888671758460135", "image": "source-ads/eleat_1888671758460135.jpg", "variants": []}, "2871430599865769": {"id": "eleat-2871430599865769", "title": "Studio clean \u2014 WHITE BG (No time / 90s)", "archetype": "D-StudioClean", "days": 6, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["No time for breakfast? No problem.", "90 seconds. 20g protein.", "20G Protein", "0g Added Sugar", "BC30 Probiotic"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Studio composition with solid WHITE background. Nutrilov Protein Granola pack (deep red) center-right, hand holding bowl of granola bottom-left. Three white circle badges stacked down the left side (20G Protein \u00b7 0g Added Sugar \u00b7 BC30 Probiotic). No retail bar, no Trustpilot, no rating. Clean studio lighting. Headline top of frame in dark grey/black. See Variants for headline + BG combos.", "source_url": "https://www.facebook.com/ads/library/?id=2871430599865769", "image": "source-ads/eleat_2871430599865769.jpg", "variants": [{"label": "v1 \u2014 No time / WHITE", "headline": "No time for breakfast? No problem.", "sub": "90 seconds. 20g protein.", "ribbon": "WHITE background \u00b7 dark headline", "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71350 (4:5)"}, {"label": "v2 \u2014 Skip cooking / WHITE", "headline": "Skip cooking. Not breakfast.", "sub": "20g protein in 90 seconds.", "ribbon": "WHITE background \u00b7 dark headline", "dimensions": "1080\u00d71080 (1:1)"}, {"label": "v3 \u2014 Apple math / WHITE", "headline": "The apple you grab has 0.5g protein. This has 20.", "sub": "90 seconds. No blender.", "ribbon": "WHITE background \u00b7 dark headline", "dimensions": "1080\u00d71350 (4:5)"}, {"label": "v4 \u2014 Urdu / WHITE", "headline": "Nashta karne ka time nahi? Ab hai.", "sub": "90 seconds. 20g protein.", "ribbon": "WHITE background \u00b7 dark headline", "dimensions": "1080\u00d71080 (1:1)"}]}, "1515430366742541": {"id": "eleat-1515430366742541", "title": "Studio clean \u2014 RED BG (Sugar kam)", "archetype": "D-StudioClean", "days": 6, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Sugar kam. Taste pura.", "0g added sugar. 20g protein.", "20G Protein", "0g Added Sugar", "BC30 Probiotic"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Studio composition with solid RED #C62828 background (Nutrilov protein-line signature). Pack center, bowl with chocolate chunks beside it. Three white circle badges (20G Protein \u00b7 0g Added Sugar \u00b7 BC30 Probiotic). No retail, no rating. Headline in white at top. See Variants.", "source_url": "https://www.facebook.com/ads/library/?id=1515430366742541", "image": "source-ads/eleat_1515430366742541.jpg", "variants": [{"label": "v1 \u2014 Sugar kam / RED", "headline": "Sugar kam. Taste pura.", "sub": "0g added sugar. 20g protein.", "ribbon": "RED #C62828 background \u00b7 white headline", "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71350 (4:5)"}, {"label": "v2 \u2014 Pre-diabetic / RED", "headline": "Pre-diabetic? Start with breakfast.", "sub": "0g added sugar. Dairy protein.", "ribbon": "RED #C62828 background \u00b7 white headline", "dimensions": "1080\u00d71080 (1:1)"}, {"label": "v3 \u2014 Cereal vs granola / RED", "headline": "Cereal that fits a diabetic's breakfast.", "sub": "0g added sugar. 20g protein.", "ribbon": "RED #C62828 background \u00b7 white headline", "dimensions": "1080\u00d71350 (4:5)"}, {"label": "v4 \u2014 Paratha math / RED", "headline": "Paratha: 8g protein. This: 20g.", "sub": "Aap chuno.", "ribbon": "RED #C62828 background \u00b7 white headline \u00b7 Urdu code-switch", "dimensions": "1080\u00d71080 (1:1)"}]}, "1371820251663917": {"id": "eleat-1371820251663917", "title": "Studio clean \u2014 BLACK BG (Pakistan's first)", "archetype": "D-StudioClean", "days": 6, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Pakistan's first 20g Protein Granola", "Real protein. Real ingredients.", "20G Protein", "0g Added Sugar", "BC30 Probiotic"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Studio composition with solid BLACK background. Pack center, black Nutrilov branded bowl with granola. Three white circle badges (20G Protein \u00b7 0g Added Sugar \u00b7 BC30 Probiotic). No retail, no rating. Headline in white at top. Premium feel. See Variants.", "source_url": "https://www.facebook.com/ads/library/?id=1371820251663917", "image": "source-ads/eleat_1371820251663917.jpg", "variants": [{"label": "v1 \u2014 Pakistan's first / BLACK", "headline": "Pakistan's first 20g Protein Granola.", "sub": "Real protein. Real ingredients.", "ribbon": "BLACK background \u00b7 white headline", "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71350 (4:5)"}, {"label": "v2 \u2014 Real food / BLACK", "headline": "Real food protein. Not powder.", "sub": "Wholegrain oats, milk protein, almonds, BC30.", "ribbon": "BLACK background \u00b7 white headline", "dimensions": "1080\u00d71080 (1:1)"}, {"label": "v3 \u2014 No bloat / BLACK", "headline": "Protein without the bloat.", "sub": "BC30 probiotic. Casein-dominant. 20g.", "ribbon": "BLACK background \u00b7 white headline", "dimensions": "1080\u00d71350 (4:5)"}, {"label": "v4 \u2014 High protein sorted / BLACK", "headline": "High protein breakfast \u2014 sorted.", "sub": "20g protein. 0g added sugar. 90 seconds.", "ribbon": "BLACK background \u00b7 white headline", "dimensions": "1080\u00d71080 (1:1) + 1080\u00d71920 (9:16)"}]}, "717669104768051": {"id": "eleat-717669104768051", "title": "Some Saturday nights we\u2026", "archetype": "H-MealPrep", "days": 43, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Some Saturday nights we \ud83c\udf77\ud83e\udd42", "Others we \ud83d\udce6\ud83e\udd44 (Sunday meal prep)", "Chicken kimchi fried rice", "Sweet potato tuna veg", "Nutrilov Protein Granola \u2014 chocolate is my favourite flavour \ud83c\uddf5\ud83c\uddf0", "Free Nutrilov bowl via this link \ud83d\udd17"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match top-down meal-prep grid: 6 prepped tupperware containers laid out on white surface, with Nutrilov Protein Granola pack tucked top-right, small ingredient callouts pointing to each container. Add a fruit pot. Maintain the 'organized Sunday prep' aesthetic.", "source_url": "https://www.facebook.com/ads/library/?id=717669104768051", "image": "source-ads/eleat_717669104768051.jpg", "variants": []}, "922797993630676": {"id": "eleat-922797993630676", "title": "Pre/post workout breakfast Q&A", "archetype": "I-QA-Box", "days": 73, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Q: Do you plan your meals around workouts? What's best for a morning workout?", "Yeah so if I'm doing a morning workout I'll plan something with carbs (oats) \u2014 these @nutrilov Protein Granola servings end up around 24g protein with milk.", "If I'm not training I'll have Greek yogurt + granola. That's just what works for me.", "They've got an offer on \u2014 20% off & free bowl currently \ud83e\udd63"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match Q&A-in-shipping-box archetype: cardboard shipping box opened at bottom of frame with Nutrilov Protein Granola packs (red + variants) tucked inside. White IG question box at top. 3 black overlay answer boxes stacked down the frame. Domestic interior.", "source_url": "https://www.facebook.com/ads/library/?id=922797993630676", "image": "source-ads/eleat_922797993630676.jpg", "variants": []}, "899435403079459": {"id": "eleat-899435403079459", "title": "My go-to high protein breakfast", "archetype": "G-UGCHoldHome", "days": 72, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Q: This is my go-to high protein breakfast. You?", "this is yummyyy \ud83d\ude0b", "@nutrilov"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match domestic hand-hold archetype: hand holds Nutrilov Protein Granola pack center-frame, IG sticker question box top-third, plant + radiator + tile floor backdrop. Domestic PK home setting. Casual UGC handheld.", "source_url": "https://www.facebook.com/ads/library/?id=899435403079459", "image": "source-ads/eleat_899435403079459.jpg", "variants": []}, "1873043616888676": {"id": "eleat-1873043616888676", "title": "No rush mornings", "archetype": "G-UGCHoldOutdoor", "days": 15, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["No rush mornings, toddler in tow and two dogs ready to go \ud83d\udc15", "Fuelled with 20g+ of protein, 100% natural ingredients, and something that actually tastes good \u2728"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match outdoor/forest morning archetype: woman in beanie + winter coat holds black Nutrilov branded cup of granola, eating with spoon, pine forest backdrop, blue sky. Cold-weather lifestyle hero. PK winter context (Murree / Northern Pakistan).", "source_url": "https://www.facebook.com/ads/library/?id=1873043616888676", "image": "source-ads/eleat_1873043616888676.jpg", "variants": []}, "3408192669333959": {"id": "eleat-3408192669333959", "title": "Some life before training", "archetype": "G-UGCHoldGym", "days": 32, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Nutrilov giving me some life before training \ud83e\udd24", "@nutrilov \u2014 20g protein, 90 seconds"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match gym-exterior hold: hand holds black Nutrilov branded cup outside a gym entrance, signage visible in background ('FORTITUDE FUNCTIONAL FITNESS GYM' or similar PK gym). Brick wall, wooden bench seating. Pre-training fuel context.", "source_url": "https://www.facebook.com/ads/library/?id=3408192669333959", "image": "source-ads/eleat_3408192669333959.jpg", "variants": []}, "952901150813468": {"id": "eleat-952901150813468", "title": "Why I use Nutrilov \u2014 the science", "archetype": "G-UGCHoldKitchen", "days": 15, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Why I use @nutrilov Protein Granola:", "Adding protein (milk + casein-dominant blend) and healthy fats (almonds) to carbs (oats) slows digestion. Stabilizes blood sugar, keeps you full longer, reduces 11am cravings.", "They taste delicious BUT they have real ingredients \u2014 wholegrain oats, milk protein, almonds, BC30 probiotic. \ud83c\uddf5\ud83c\uddf0"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match kitchen-counter hold: Nutrilov Protein Granola pack held in frame top-half, white bowl with granola + spoon bottom-half, kitchen counter + olive oil bottle out of focus. Long-form caption overlay on bowl. Educational/founder-voice UGC.", "source_url": "https://www.facebook.com/ads/library/?id=952901150813468", "image": "source-ads/eleat_952901150813468.jpg", "variants": []}, "990864410044104": {"id": "eleat-990864410044104", "title": "Energised mornings \u2014 full line", "archetype": "A-BundleLineup", "days": 15, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["If you want to feel good, energised, and ready to train in the morning you're going to need a high protein, high fibre breakfast with a good amount of carbohydrates.", "This is why I love @nutrilov \u2014 around 24g protein when combined with milk, high in fibre, quick to prep. My best hack for busy PK moms \ud83c\uddf5\ud83c\uddf0"], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match window-light flat-lay of full Nutrilov product line: multiple packs (Protein Granola red + Protein Bar Box + Cereal + Zero Sugar Bar) arranged on kitchen island, branded bowl center, morning window light. Wide caption block top-right + bottom-right.", "source_url": "https://www.facebook.com/ads/library/?id=990864410044104", "image": "source-ads/eleat_990864410044104.jpg", "variants": []}, "1442329427197452": {"id": "eleat-1442329427197452", "title": "My first protein hit of the day", "archetype": "A-BundleCouch", "days": 43, "format": "1080\u00d71920 + 1080\u00d71350", "image_copy": ["Oh what do I eat in the morning?", "Genuinely, @nutrilov is my go-to every day.", "I'm not joking \u2014 this is my first protein hit of the day, every day."], "caption": "20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com \u2014 delivered to your door \ud83c\uddf5\ud83c\uddf0", "cta": "Shop Now \u2192 nutrilov.com", "visual": "Match couch-pile archetype: Nutrilov packs (Protein Granola red + Protein Bar pink/red + Cereal + Zero Sugar variants) spread across a grey couch, branded bowl tucked in middle. Three black quote overlays stacked top. Casual at-home aesthetic.", "source_url": "https://www.facebook.com/ads/library/?id=1442329427197452", "image": "source-ads/eleat_1442329427197452.jpg", "variants": []}};
+const panel = document.getElementById('panel');
+const backdrop = document.getElementById('backdrop');
+let activeId = null;
+
+function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+function openBrief(id){
+  const b = BRIEFS[id];
+  if (!b) return;
+  activeId = id;
+  document.getElementById('panelTitle').textContent = b.title;
+  document.getElementById('panelImg').src = b.image;
+  document.getElementById('panelSourceLink').href = b.source_url;
+  document.getElementById('panelFormat').textContent = b.format;
+  document.getElementById('panelImageCopy').innerHTML = b.image_copy.map(l => `<li>${escapeHtml(l)}</li>`).join('');
+  document.getElementById('panelCaption').textContent = b.caption;
+  document.getElementById('panelCta').textContent = b.cta;
+  document.getElementById('panelVisual').textContent = b.visual;
+  const vWrap = document.getElementById('panelVariantsWrap');
+  const vList = document.getElementById('panelVariants');
+  if (b.variants && b.variants.length) {
+    vWrap.style.display = '';
+    document.getElementById('panelVariantsCount').textContent = `(${b.variants.length})`;
+    vList.innerHTML = b.variants.map((v, i) => {
+      const ribbon = v.ribbon ? `<div class="vribbon">Ribbon: "${escapeHtml(v.ribbon)}"</div>` : '';
+      return `<div class="variant">
+        <div class="variant-head"><span class="vlabel">${escapeHtml(v.label)}</span><span class="vdims">${escapeHtml(v.dimensions)}</span></div>
+        <div class="vheadline">"${escapeHtml(v.headline)}"</div>
+        <div class="vsub">"${escapeHtml(v.sub)}"</div>
+        ${ribbon}
+        <div class="vrow"><button class="copy-btn" data-vcopy="${i}">Copy headline + sub</button></div>
+      </div>`;
+    }).join('');
+    vList.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const idx = parseInt(btn.dataset.vcopy, 10);
+        const v = b.variants[idx];
+        await navigator.clipboard.writeText(`${v.headline}\n${v.sub}`);
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = orig, 1000);
+      });
+    });
+  } else {
+    vWrap.style.display = 'none';
+  }
+  document.getElementById('panelArch').textContent = b.archetype + ' · source ad ran ' + b.days + ' days';
+  panel.classList.add('open');
+  backdrop.classList.add('open');
+}
+function closeBrief(){ panel.classList.remove('open'); backdrop.classList.remove('open'); activeId = null; }
+
+document.querySelectorAll('button.ex[data-brief-id]').forEach(b =>
+  b.addEventListener('click', () => openBrief(b.dataset.briefId)));
+document.getElementById('panelClose').addEventListener('click', closeBrief);
+backdrop.addEventListener('click', closeBrief);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBrief(); });
+
+document.querySelectorAll('.panel-body .copy-btn[data-copy]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    if (!activeId) return;
+    const b = BRIEFS[activeId];
+    const which = btn.dataset.copy;
+    const text = which === 'image_copy' ? b.image_copy.join('\n') : b[which];
+    await navigator.clipboard.writeText(text);
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 1000);
+  });
+});
+
+// open by URL hash (so /formats/#<lib_id> deep-links to a brief)
+function openFromHash(){
+  const id = location.hash.replace('#','').trim();
+  if (id && BRIEFS[id]) openBrief(id);
+}
+openFromHash();
+window.addEventListener('hashchange', openFromHash);
+</script>
+</body></html>
