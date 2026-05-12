@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nutrilov — Copy Library by Angle</title>
+<style>
+:root{--bg:#faf8f3;--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e1d6;--card:#fff;}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,system-ui,sans-serif;margin:0;line-height:1.55;font-size:15px;}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 22px 80px;}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:14px;}
+.crumb a{color:var(--muted);}
+header{margin-bottom:18px;}
+h1{font-size:28px;margin:0 0 4px;letter-spacing:-0.01em;}
+.sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
+
+.nav{position:sticky;top:0;background:var(--bg);padding:10px 0 12px;border-bottom:1px solid var(--line);z-index:10;margin-bottom:24px;display:flex;gap:6px;flex-wrap:wrap;}
+.navchip{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:6px;text-decoration:none;color:var(--ink);background:#fff;}
+.navchip:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+.angle{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 26px;margin-bottom:22px;}
+.angle-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:10px;}
+.angle-id{font-size:36px;font-weight:700;color:var(--muted);line-height:1;letter-spacing:-0.02em;width:54px;flex-shrink:0;}
+.angle-titlebox{flex:1;}
+.angle-titlebox h2{margin:0 0 6px;font-size:21px;letter-spacing:-0.005em;}
+.angle-meta{display:flex;gap:4px;flex-wrap:wrap;}
+.core{font-size:14px;color:#333;margin:0 0 10px;}
+blockquote{margin:10px 0 16px;padding:8px 14px;border-left:3px solid var(--line);font-style:italic;color:#555;font-size:13.5px;background:#f7f3e9;border-radius:0 6px 6px 0;}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
+.block{background:#fafaf6;border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
+.block + .block{margin-top:12px;}
+.label{display:block;font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+.label .muted{font-weight:400;font-size:10.5px;text-transform:none;letter-spacing:0;}
+ul.copy-list{margin:0;padding-left:18px;}
+ul.copy-list li{margin:3px 0;font-size:13.5px;line-height:1.5;}
+
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;background:#efeae0;color:#555;margin-right:4px;}
+.pill.priority{background:#C62828;color:#fff;}
+.pill.format{background:#1a1a1a;color:#fff;text-decoration:none;font-weight:600;font-size:12px;padding:3px 10px;margin-right:5px;}
+.pill.format:hover{background:#444;}
+
+.legal{margin-top:12px;padding:10px 14px;border-radius:8px;background:#fff5e6;border:1px solid #f0d99c;}
+.legal .label{color:#8a6a1f;}
+.legal ul{margin:4px 0 0;padding-left:18px;font-size:12.5px;color:#5a4413;}
+.legal li{margin:2px 0;}
+
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;}
+</style></head><body><div class="wrap">
+
+<div class="crumb"><a href="../">← All</a></div>
+<header>
+  <h1>Copy Library by Angle</h1>
+  <div class="sub">7 angles, 35+ headlines, 20+ sub-lines, 14 captions. Each angle lists compatible formats — click a format chip to jump to the format spec.</div>
+</header>
+
+<nav class="nav"><a class="navchip" href="#N1">N1 · Breakfast ka time nahi hai</a>
+<a class="navchip" href="#N2">N2 · Desi nashta is failing you</a>
+<a class="navchip" href="#N3">N3 · Imported is expensive AND low-protei</a>
+<a class="navchip" href="#N4">N4 · For kids — tasty AND protein</a>
+<a class="navchip" href="#N5">N5 · Protein without the gut issues</a>
+<a class="navchip" href="#N6">N6 · Shaadi ke baad weight — take it back</a>
+<a class="navchip" href="#N7">N7 · Sugar cut karo — but keep the taste</a></nav>
+
+<section class="angle" id="N1">
+      <div class="angle-head">
+        <div class="angle-id">N1</div>
+        <div class="angle-titlebox">
+          <h2>Breakfast ka time nahi hai</h2>
+          <div class="angle-meta">
+            <span class="pill">PK urban professional</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: High</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">Time is the binding constraint. PG wins by eliminating the clock entirely — pour milk, eat, leave.</p>
+      <blockquote>"Nashta karne ka time hi nahi hota 😔 i grab an apple and go to work"</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>No time for breakfast? No problem.</li><li>Skip cooking. Not breakfast.</li><li>The apple you grab has 0.5g protein. This has 20.</li><li>Nashta karne ka time nahi? Ab hai.</li><li>From fridge to desk in 90 seconds.</li><li>Your blender can stay clean.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>90 seconds. 20g protein.</li><li>20g protein. 90 seconds. No blender, no cooking.</li><li>Full till lunch — no 11am biscuit reflex.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>20g protein. 90 seconds. No blender, no cooking, no leftover salan. Order at nutrilov.com — delivered to your door 🇵🇰</li><li>Mornings shouldn&#x27;t fight you. Pour, eat, leave. 20g protein in 90 seconds. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#C">C</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#F">F</a> <a class="pill format" href="../formats/#G">G</a> <a class="pill format" href="../formats/#H">H</a> <a class="pill format" href="../formats/#L">L</a> <a class="pill format" href="../formats/#M">M</a></div>
+      </div>
+
+      
+    </section>
+<section class="angle" id="N2">
+      <div class="angle-head">
+        <div class="angle-id">N2</div>
+        <div class="angle-titlebox">
+          <h2>Desi nashta is failing you</h2>
+          <div class="angle-meta">
+            <span class="pill">Mass PK, mixed awareness</span>
+            <span class="pill">Mixed</span>
+            <span class="pill priority">Priority: High</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">Don&#x27;t attack paratha — attacking identity food loses. Reframe: keep paratha for Sundays; the other 6 days need a protein floor.</p>
+      <blockquote>"Meri tond ka raaz (8+4 upvotes on the salan-for-breakfast thread)"</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>Paratha: 8g protein. This: 20g.</li><li>Keep the paratha for Sundays.</li><li>Meri tond ka raaz? Probably this.</li><li>Pichli raat ka salan is not a food group.</li><li>Nashta: protein wala. Paratha: treat wala.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>Aap chuno.</li><li>Mon–Sat protein floor. Sunday treat.</li><li>17g/day PK avg. WHO says 27.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>Paratha is a Sunday food, not a Monday food. Mon–Sat: 20g protein in 90 seconds. nutrilov.com</li><li>Pakistan&#x27;s protein deficit is 10g a day. One bowl closes 70% of it. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#C">C</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#G">G</a> <a class="pill format" href="../formats/#M">M</a></div>
+      </div>
+
+      
+    </section>
+<section class="angle" id="N3">
+      <div class="angle-head">
+        <div class="angle-id">N3</div>
+        <div class="angle-titlebox">
+          <h2>Imported is expensive AND low-protein</h2>
+          <div class="angle-meta">
+            <span class="pill">Gym-goer + label-reader</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: High</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">Imported = Rs.900 Quest. Local = Rs.100 Kellogg&#x27;s with 5g. Middle is empty. PG fills it — imported inputs, local accountability.</p>
+      <blockquote>"Local protein bars from Jacked Nutrition — kasam say they&#x27;re so disgusting"</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>Pakistan&#x27;s first 20g Protein Granola.</li><li>Imported ka price. Pakistani ka bharosa.</li><li>Halal. Local. No Daraz gamble.</li><li>Read the label. Then read ours.</li><li>Real food protein. Not powder.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>Real protein. Real ingredients.</li><li>EU milk protein + US BC30. Built in Karachi.</li><li>20g protein. 0g added sugar. BC30 probiotic.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>Imported quality. Pakistani accountability. 20g protein per bowl, no Daraz gamble. nutrilov.com</li><li>8-item ingredient list. All pronounceable. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#A">A</a> <a class="pill format" href="../formats/#B">B</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#K">K</a> <a class="pill format" href="../formats/#N">N</a></div>
+      </div>
+
+      <div class="legal"><span class="label">Legal rails:</span><ul><li>Halal — confirm no porcine-adjacent inputs with QA</li></ul></div>
+    </section>
+<section class="angle" id="N4">
+      <div class="angle-head">
+        <div class="angle-id">N4</div>
+        <div class="angle-titlebox">
+          <h2>For kids — tasty AND protein</h2>
+          <div class="angle-meta">
+            <span class="pill">PK mothers 28–45</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: Medium</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">Daily lunchbox negotiation. Oreo+Lays+juice = eaten but guilty. PG choco tastes like dessert, hits 12g protein / 0g added.</p>
+      <blockquote>"Obesity is on the rise in Pakistan too. More and more kids look like water balloons."</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>The breakfast they ask for seconds of.</li><li>Oreo has 5g protein. This has 20.</li><li>Bina guilt ke nashta.</li><li>Kids ki pasand. Maa ka yaqeen.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>12g protein. 0g added sugar. Tasty enough for them.</li><li>One lunchbox = 2.5× the WHO daily sugar cap. This: 5g total.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>The breakfast that ends the daily lunchbox negotiation. Tasty for them, 0g added sugar for you. nutrilov.com</li><li>WHO says &lt;25g sugar/day for kids. One Oreo pack already = 37g. Switch to nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#A">A</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#F">F</a> <a class="pill format" href="../formats/#M">M</a> <a class="pill format" href="../formats/#N">N</a></div>
+      </div>
+
+      <div class="legal"><span class="label">Legal rails:</span><ul><li>Half-serving framing for 7+ kids needed at brief stage (20g+milk is adult-portion)</li></ul></div>
+    </section>
+<section class="angle" id="N5">
+      <div class="angle-head">
+        <div class="angle-id">N5</div>
+        <div class="angle-titlebox">
+          <h2>Protein without the gut issues</h2>
+          <div class="angle-meta">
+            <span class="pill">Whey-burned gym-goer + IBS-sensitive</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: Medium / niche / defensible</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">~58% of PK is lactose-malabsorber. BC30 is a named, published probiotic strain with peer-reviewed data — no PK competitor claims this.</p>
+      <blockquote>"I&#x27;ve been eating at least a Quest bar a day. In the last month I&#x27;ve been having gas and bloating issues — I think you just figured it out."</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>Protein without the bloat.</li><li>Whey nahi. Oats + protein + probiotics.</li><li>Your gut will notice before your mirror does.</li><li>No shake. No gas.</li><li>Real food protein, not powder.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>BC30 probiotic. Casein-dominant. 20g.</li><li>1bn CFU BC30, USA-sourced strain.</li><li>Backed by published research on the BC30 strain.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>Half the country can&#x27;t fully digest whey. Casein-dominant + BC30 probiotic — 20g protein your gut tolerates. nutrilov.com</li><li>Real food protein. BC30 strain. Pakistan&#x27;s only granola with named probiotic + citation trail. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#A">A</a> <a class="pill format" href="../formats/#B">B</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#I">I</a> <a class="pill format" href="../formats/#K">K</a></div>
+      </div>
+
+      <div class="legal"><span class="label">Legal rails:</span><ul><li>BC30 claims = quote study titles, not outcomes. Frame: &#x27;research on the BC30 strain&#x27;.</li></ul></div>
+    </section>
+<section class="angle" id="N6">
+      <div class="angle-head">
+        <div class="angle-id">N6</div>
+        <div class="angle-titlebox">
+          <h2>Shaadi ke baad weight — take it back</h2>
+          <div class="angle-meta">
+            <span class="pill">PK 28–38, married, slight female skew</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: High (underserved)</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">Latent demand, no one targeting it. Position as low-friction first move: before restarting the gym, restart the breakfast.</p>
+      <blockquote>"Before marriage I was 80kg with lean muscle mass. Got married last March, couldn&#x27;t continue gym. Now fat belly and ugly love handles."</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>Shaadi ke baad wazan. Ab wapis.</li><li>You didn&#x27;t stop caring. You stopped having breakfast.</li><li>Before marriage: abs. After: this.</li><li>Gym chhor di? At least nashta theek karo.</li><li>Reversal starts at 7am. Not 7pm.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>20g protein. 4–6 hour casein release.</li><li>One meal. Upstream of every other change.</li><li>Same kitchen. 90 seconds. One bowl each.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>You didn&#x27;t stop caring. You stopped having breakfast. Restart with 20g protein in 90 seconds. nutrilov.com</li><li>Smallest shared move for couples restarting. Same box on the counter. 7am. 20g each. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#E">E</a> <a class="pill format" href="../formats/#G">G</a> <a class="pill format" href="../formats/#H">H</a> <a class="pill format" href="../formats/#I">I</a></div>
+      </div>
+
+      <div class="legal"><span class="label">Legal rails:</span><ul><li>Don&#x27;t hard-quote &#x27;1 in 4 PCOS&#x27; — frame as &#x27;South Asian women among highest PCOS rates globally&#x27;.</li></ul></div>
+    </section>
+<section class="angle" id="N7">
+      <div class="angle-head">
+        <div class="angle-id">N7</div>
+        <div class="angle-titlebox">
+          <h2>Sugar cut karo — but keep the taste</h2>
+          <div class="angle-meta">
+            <span class="pill">PK pre-diabetic 35+ / caregiver</span>
+            <span class="pill">Problem-aware</span>
+            <span class="pill priority">Priority: Highest</span>
+          </div>
+        </div>
+      </div>
+      <p class="core">PK = world&#x27;s highest diabetes prevalence (31%). PG = 0g added sugar + dairy protein cuts post-meal glucose AUC ~18%. Most citation-rich angle.</p>
+      <blockquote>"SUGAR ki bimari — muscle loss → reduced metabolism → infamous SUGAR ki bimari"</blockquote>
+
+      <div class="grid-2">
+        <div class="block">
+          <div class="label">Headlines</div>
+          <ul class="copy-list"><li>Sugar kam. Taste pura.</li><li>Pre-diabetic? Start with breakfast.</li><li>Fauji: 18g sugar. Yeh: 6g.</li><li>Cereal that fits a diabetic&#x27;s breakfast.</li><li>20g protein flattens the sugar spike.</li></ul>
+        </div>
+        <div class="block">
+          <div class="label">Sub-lines</div>
+          <ul class="copy-list"><li>0g added sugar. 20g protein.</li><li>Taste same. Meter different.</li><li>Dairy protein. Casein-dominant. BC30.</li></ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">Captions (FB / IG post)</div>
+        <ul class="copy-list"><li>1 in 3 Pakistanis is diabetic. Highest in the world. 0g added sugar breakfast. nutrilov.com</li><li>Pre-diabetic? The breakfast you don&#x27;t dread. 0g added sugar. Tastes like dessert. nutrilov.com</li></ul>
+      </div>
+
+      <div class="block formats">
+        <div class="label">Compatible formats <span class="muted">(click to jump)</span></div>
+        <div><a class="pill format" href="../formats/#C">C</a> <a class="pill format" href="../formats/#D">D</a> <a class="pill format" href="../formats/#F">F</a> <a class="pill format" href="../formats/#L">L</a> <a class="pill format" href="../formats/#M">M</a></div>
+      </div>
+
+      <div class="legal"><span class="label">Legal rails:</span><ul><li>Glucose framing = &#x27;studies show&#x27; not &#x27;lowers blood sugar&#x27;</li><li>β-glucan = ingredient claim, not product daily dose (single serving below 3g FDA threshold)</li><li>Verify exact Fauji pack sugar number before citing</li></ul></div>
+    </section>
+
+<footer>Source: <code>brands/nutrilov/products/protein-granola/angles.md</code> · Built from 4,830 VoC comments (PK Reddit + YouTube).</footer>
+</div></body></html>
